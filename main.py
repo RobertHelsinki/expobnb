@@ -96,6 +96,7 @@ def wallet_add():
             else:
                 new_data = Wallets(username, token, wallet_address, '0', '0', '0')
                 db.session.add(new_data)
+                ch_user.wallet_config = "yes"
                 db.session.commit()
             token=token.upper()
             flash("{} Address set successfully".format(token))
