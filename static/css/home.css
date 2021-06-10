@@ -1,0 +1,39 @@
+.photo-holder{
+    max-width:80px;
+}
+
+.carousel-inner{
+    min-height:40vh;
+    margin:auto;
+    width:100%;
+}
+
+.carousel-item{
+    max-width:80vw;
+}
+
+.responsive{
+    max-width:100%;
+    height:auto;
+
+}
+
+.center-container{
+    color:white;
+    width:70vw;
+    margin: auto;
+    padding-top: 50px;
+    text-align:center;
+}
+
+.answer{
+    border:1px solid white;
+    padding:10px;
+    border-radius:25px;
+}
+
+.answer-text{
+    font-weight:40;
+    font-size:25px;
+}
+

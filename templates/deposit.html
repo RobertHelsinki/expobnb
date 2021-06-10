@@ -1,0 +1,72 @@
+{% extends "base_logged.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" integrity="undefined" crossorigin="anonymous">
+<link rel="stylesheet" href="{{url_for('static',filename='css/deposit.css')}}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="undefined" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+<!--Import materialize.css-->
+{% endblock %}
+
+{% block content %}
+
+
+<div class="su-container" style="background:#1d2c47;width:100vw;height:auto;padding-top:10vh;">
+    <div class="center-container">
+        <div class="row" style="">
+            <h4>DEPOSIT</h4>
+        </div>
+        <br />
+        <br />
+        <br />
+        <div class="row" id="card-container">
+            <div class="token-img">
+                <img src="{{url_for('static',filename='css/img/coins/doge.png')}}" class="token-img">
+                <h5 style="float:middle;">DOGE</h5>
+            </div>
+
+            <div class="row">
+            <input id="doge" onclick="copyFunction('doge')" style="color:white;border-radius:5px;margin:auto;border:1px solid grey;padding:5px;text-align:center;background:#1d2c47;height:30px;width:98%" type="text" value="DM687sVM9jegx5PJFw5gUVmopbdW3eHBwj" disabled>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="row" id="card-container">
+            <div class="token-img">
+                <img src="{{url_for('static',filename='css/img/coins/bnb.png')}}" class="token-img">
+                <h5 style="float:middle;">BNB</h5>
+            </div>
+
+            <div class="row">
+            <input style="color:white;border-radius:5px;margin:auto;border:1px solid grey;padding:5px;text-align:center;background:#1d2c47;height:30px;width:98%" type="text" value="0x187C1F922194C766A26fFf793099281BA338f321" disabled>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="row" id="card-container">
+            <div class="token-img">
+                <img src="{{url_for('static',filename='css/img/coins/trx.png')}}" class="token-img">
+                <h5 style="float:middle;">TRX</h5>
+            </div>
+
+            <div class="row">
+            <input style="color:white;border-radius:5px;margin:auto;border:1px solid grey;padding:5px;text-align:center;background:#1d2c47;height:30px;width:98%" type="text" value="TJuMbKWSY6GnWGYEnRKoFa11LYaQZeTAKp" disabled>
+            </div>
+        </div>
+        <br />
+        <br />
+    </div>
+</div>
+
+<script>
+    function copyFunction(uid){
+        var text = document.getElementById(uid);
+        text.select();
+        document.execCommand("copy");
+        alert("Copied to clipboard")
+    }
+</script>
+{% endblock %}

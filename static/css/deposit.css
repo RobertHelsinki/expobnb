@@ -1,0 +1,36 @@
+.token-img img{
+    height:12vw;
+    width:12vw;
+    max-width: 70px;
+    margin:auto;
+    max-height: 70px;
+    display: block;
+}
+
+.center-container{
+    color:white;
+    width:100vw;
+    margin: auto;
+    text-align:center;
+    background:#1d2c47;
+}
+
+#card-container{
+    border-radius:20px;
+    padding:15px;
+    width:95vw;
+    height:250px;
+    max-width:400px;
+    background:#0c1121;
+}
+.row input{
+    color:white;
+    border-radius:5px;
+    margin:auto;
+    border:1px solid grey;
+    padding:5px;
+    text-align:center;
+    background:#1d2c47;
+    height:30px;
+    width:95%;
+}

@@ -1,0 +1,122 @@
+{% extends "base_logged.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="{{url_for('static',filename='css/wallet.css')}}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="container" style="background:#1d2c47;max-width:100vw;" id="container">
+                     {% with messages = get_flashed_messages() %}
+
+{% if messages %}
+
+{% for message in messages %}
+
+<div class="alert alert-success alert-dismissable" role="alert">
+
+    <button type="button" class="close" data-dismiss="alert" aria-label="close">
+
+        <span aria-hidden="true">x</span>
+
+    </button>
+
+
+{{message}}
+
+
+</div>
+
+
+{% endfor %}
+
+{% endif %}
+{% endwith %}
+    <div class="center-container">
+
+        <br />
+        <h1>Wallets</h1>
+        <br/>
+    </div>
+    <div class="center-container">
+
+    <div class="card-container">
+
+        <div class="card" style="width: 22rem;" id="hidder1">
+          <img src="{{url_for('static',filename='css/img/coins/doge.png')}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">DOGE</h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <form method="post">
+            <li class="list-group-item" style="border:none;">Wallet Address</li>
+              <li class="list-group-item figures" style="border:none;"><input type="hidden" name="token" value="doge"></li>
+            <li class="list-group-item"><input name="address" style="text-align:center;padding:10px;border-radius:20px;width:70vw;max-width:300px;color:white;background:transparent;border:1px solid blue;" type="text"></li>
+            <li class="list-group-item"></li>
+              <li class="list-group-item figures"><input type="submit" value="Set" style="text-align:center;padding:10px;color:white;width:80vw;max-width:150px;background:#38ACEC;border-radius:20px;border:1px solid blue;"></li>
+            <li class="list-group-item" style="color:transparent;">.</li>
+              <li class="list-group-item figures" style="color:transparent;">.</li>
+            </form>
+          </ul>
+        </div>
+
+        <div class="card" style="width: 22rem;" id="hidder1">
+          <img src="{{url_for('static',filename='css/img/coins/bnb.png')}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">BNB</h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <form method="post">
+            <li class="list-group-item" style="border:none;">Wallet Address</li>
+              <li class="list-group-item figures" style="border:none;"><input type="hidden" name="token" value="bnb"></li>
+            <li class="list-group-item"><input name="address" style="text-align:center;padding:10px;border-radius:20px;width:70vw;max-width:300px;color:white;background:transparent;border:1px solid blue;" type="text"></li>
+            <li class="list-group-item"></li>
+              <li class="list-group-item figures"><input type="submit" value="Set" style="text-align:center;padding:10px;color:white;width:80vw;max-width:150px;background:#38ACEC;border-radius:20px;border:1px solid blue;"></li>
+            <li class="list-group-item" style="color:transparent;">.</li>
+              <li class="list-group-item figures" style="color:transparent;">.</li>
+            </form>
+          </ul>
+        </div>
+
+        <div class="card" style="width: 22rem;" id="hidder1">
+          <img src="{{url_for('static',filename='css/img/coins/trx.png')}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">TRX</h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <form method="post">
+            <li class="list-group-item" style="border:none;">Wallet Address</li>
+              <li class="list-group-item figures" style="border:none;"><input type="hidden" name="token" value="trx"></li>
+            <li class="list-group-item"><input name="address" style="text-align:center;padding:10px;border-radius:20px;width:70vw;max-width:300px;color:white;background:transparent;border:1px solid blue;" type="text"></li>
+            <li class="list-group-item"></li>
+              <li class="list-group-item figures"><input type="submit" value="Set" style="text-align:center;padding:10px;color:white;width:80vw;max-width:150px;background:#38ACEC;border-radius:20px;border:1px solid blue;"></li>
+            <li class="list-group-item" style="color:transparent;">.</li>
+              <li class="list-group-item figures" style="color:transparent;">.</li>
+            </form>
+          </ul>
+        </div>
+
+
+
+
+    </div>
+    <br />
+</div>
+
+<script>
+function myFunction() {
+  l = ["hidder1","hidder2","hidder3"]
+  var x = document.getElementById("container");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+
+}
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    {% endblock %}

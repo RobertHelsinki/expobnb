@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="{{url_for('static',filename='css/profit.css')}}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="container" style="background:#1d2c47;max-width:100vw;" id="container">
+    <div class="center-container">
+        <br />
+        <h1>STAKING POOLS</h1>
+        <br/>
+    </div>
+    <div class="center-container">
+
+    <div class="card-container">
+
+        <div class="card" style="width: 22rem;" id="hidder1">
+          <img src="{{url_for('static',filename='css/img/coins/doge.png')}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">DOGE</h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Staking Pool</li>
+              <li class="list-group-item figures">1,35,274 DOGE</li>
+            <li class="list-group-item">APR</li>
+              <li class="list-group-item figures">2743.45 %</li>
+            <li class="list-group-item">Daily Profit</li>
+              <li class="list-group-item figures">7.45 %</li>
+          </ul>
+        </div>
+
+         <div class="card" style="width: 22rem;" id="hidder2">
+          <img src="{{url_for('static',filename='css/img/coins/bnb.png')}}" class="card-img-top" alt="...">
+             <div class="card-body">
+            <h5 class="card-title">BNB</h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Staking Pool</li>
+              <li class="list-group-item figures">7,345 BNB</li>
+            <li class="list-group-item">APR</li>
+              <li class="list-group-item figures">3627.82 %</li>
+            <li class="list-group-item">Daily Profit</li>
+              <li class="list-group-item figures">10.20 %</li>
+          </ul>
+        </div>
+
+         <div class="card" style="width: 22rem;" id="hidder3">
+          <img src="{{url_for('static',filename='css/img/coins/trx.png')}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">TRX</h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Staking Pool</li>
+              <li class="list-group-item figures">17,07,596 TRX</li>
+            <li class="list-group-item">APR</li>
+              <li class="list-group-item figures">1872.38 %</li>
+            <li class="list-group-item">Daily Profit</li>
+              <li class="list-group-item figures">5.12 %</li>
+          </ul>
+        </div>
+
+
+
+
+    </div>
+    <br />
+</div>
+
+<script>
+function myFunction() {
+  l = ["hidder1","hidder2","hidder3"]
+  var x = document.getElementById("container");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+{% endblock %}

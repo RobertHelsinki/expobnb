@@ -1,0 +1,45 @@
+.center-container{
+    color:white;
+    width:90vw;
+    margin: auto;
+    padding-top: 50px;
+    text-align:center;
+}
+
+.card-container{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    flex-flow: wrap;
+    margin: -15px 0 0 0;
+}
+
+.card-container > * {
+    margin-top: 25px;
+}
+
+
+.card{
+    background: #0c1121;
+}
+
+.card-img-top{
+    padding:20px;
+    height: 125px;
+    width:125px;
+    margin: auto;
+    text-align:center;
+}
+
+.list-group-item{
+    font-size:20px;
+    color: white;
+    background: #0c1121;
+}
+
+.figures{
+    font-size:22px;
+    color:green;
+}
+
+

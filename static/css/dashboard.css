@@ -1,0 +1,78 @@
+
+.amount-box img{
+    width:50vw;
+    height:50vw;
+    max-height:150px;
+    max-width:150px;
+}
+.center-container{
+    background:#1d2c47;
+    color:white;
+    width:100vw;
+    margin: auto;
+    text-align:center;
+}
+.amount-box p{
+    color:white;
+    margin-top:10px;
+    margin-bottom:-10px;
+}
+.amount{
+    font-size:50px;
+}
+
+.center-container{
+    color:white;
+    width:100vw;
+    margin: auto;
+    text-align:center;
+}
+
+.circular-btn {
+    height:80px;
+    width:80px;
+    background:green;
+    color:white;
+}
+.img-logo img{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+.card-content{
+   background:#0c1121;
+}
+#row{
+padding-top:4vh;
+width:85vw;
+max-width:700px;
+border-radius:50px;
+background:#0c1121;
+}
+#asset-row{
+    padding:10px;
+    width:85vw;
+    max-width:700px;
+    background:#0c1121;
+    height:9vh;
+    max-height:100px;
+    line-height: 6vh;
+    border-radius:10px;
+
+}
+.card{
+    background-color: transparent;
+
+}
+
+.token-img img{
+    height:10vw;
+    width:10vw;
+    max-width: 50px;
+    max-height: 50px;
+    display: block;
+    float:left;
+    vertical-align: middle;
+}

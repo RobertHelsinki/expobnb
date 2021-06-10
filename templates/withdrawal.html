@@ -1,0 +1,69 @@
+{% extends "base_logged.html" %}
+
+{% block head %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="{{url_for('static',filename='css/wallet.css')}}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="container" style="background:#1d2c47;max-width:100vw;" id="container">
+    <div class="center-container">
+        <br />
+        <h1>Wallets</h1>
+        <br/>
+    </div>
+    <div class="center-container">
+
+    <div class="card-container">
+
+        <div class="card" style="width: 22rem;border-radius:20px;" id="hidder1">
+          <div class="card-body">
+            <h5 class="card-title">WITHDRAW</h5>
+          </div>
+            <br />
+          <ul class="list-group list-group-flush">
+            <form method="post">
+            <li class="list-group-item" style="border:none;">Choose token: </li>
+              <li class="list-group-item figures" style="border:none;"></li>
+            <li class="list-group-item">
+                <select name="token" style="width:70vw;max-width:300px;height:50px;border-radius:20px;text-align-last:center;color:white;background:#1d2c47;">
+                  <option style="text-align:center;" value="">Choose Token</option>
+                  <option value="bnb">BNB</option>
+                  <option value="doge">DOGE</option>
+                  <option value="trx">TRX</option>
+                </select>
+            </li>
+            <li class="list-group-item"></li>
+              <li class="list-group-item figures"><input name="amount" type="text" placeholder="Amount" style="text-align:center;padding:10px;color:white;width:80vw;max-width:300px;background:#1d2c47;border-radius:20px;"></li>
+            <li class="list-group-item"></li>
+              <li class="list-group-item figures"><input type="submit" value="Withdraw" style="text-align:center;padding:10px;color:white;width:80vw;max-width:150px;background:#38ACEC;border-radius:20px;border:1px solid blue;"></li>
+            <li class="list-group-item" style="color:transparent;">.</li>
+              <li class="list-group-item figures" style="color:transparent;">.</li>
+            </form>
+          </ul>
+        </div>
+
+
+
+
+    </div>
+    <br />
+
+</div>
+
+
+<script>
+function myFunction() {
+  l = ["hidder1","hidder2","hidder3"]
+  var x = document.getElementById("container");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+{% endblock %}

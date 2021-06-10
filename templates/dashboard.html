@@ -1,0 +1,129 @@
+{% extends "base_logged.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" integrity="undefined" crossorigin="anonymous">
+<link rel="stylesheet" href="{{url_for('static',filename='css/dashboard.css')}}"
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="undefined" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+<!--Import materialize.css-->
+{% endblock %}
+
+{% block content %}
+
+
+<div class="su-container" style="background:#1d2c47;width:100vw;">
+<br />
+  <div class="amount-box text-center">
+    <img src="{{url_for('static',filename='css/img/wallet.png')}}">
+    <p>Total Balance</p>
+    <p class="amount">$ {{usd_balance}}</p>
+  </div>
+  <br />
+  <br />
+  <div class="center-container">
+    <div class="row valign-wrapper" id="row">
+        <div class="col s3">
+            <div>
+                <a href="/deposit" class="btn-floating btn-medium waves-effect waves-light blue"><i class="material-icons">add</i></a>
+
+                <div class="row">
+                    <div class="spacer">
+                        <label class="loco">Deposit</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s3">
+            <div>
+                <a href="/withdraw" class="btn-floating btn-medium waves-effect waves-light blue"><i class="material-icons">send</i></a>
+                <div class="row">
+                    <div class="spacer">
+                    <label class="loco">Withdraw</label>
+                    </div>
+                    </div>
+            </div>
+        </div>
+        <div class="col s3">
+            <div>
+                <a href="/stake" class="btn-floating btn-medium waves-effect waves-light blue"><i class="material-icons">account_balance</i></a>
+                <div class="row">
+                    <div class="spacer">
+                    <label class="loco">Stake</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s3">
+            <div>
+                <a href="/wallet_add" class="btn-floating btn-medium waves-effect waves-light blue"><i class="material-icons">account_balance_wallet</i></a>
+                <div class="row">
+                    <div class="spacer">
+                    <label class="loco">Wallet</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+<br />
+  <div class="center-container">
+      <h4>Assets</h4>
+      <div class="row" id="asset-row">
+          <div class="col s2 token-img">
+              <img src="{{url_for('static',filename='css/img/coins/bnb.png')}}">
+              <p style="font-size:10px;">BNB</p>
+          </div>
+          <div class="col s2">
+              <p></p>
+          </div>
+          <div class="col s8" style="text-align:center;">
+              <p style="font-size:14px;">{{data_dict[0]}} BNB</p>
+          </div>
+      </div>
+      <div class="row" id="asset-row">
+          <div class="col s2 token-img">
+              <img src="{{url_for('static',filename='css/img/coins/doge.png')}}">
+              <p style="font-size:10px;">DOGE</p>
+          </div>
+          <div class="col s4" style="vertical-align:middle;">
+              <p style="float:left;"></p>
+          </div>
+          <div class="col s6">
+              <p style="font-size:14px;">{{data_dict[1]}} DOGE</p>
+          </div>
+      </div>
+      <div class="row" id="asset-row">
+          <div class="col s2 token-img">
+              <img src="{{url_for('static',filename='css/img/coins/trx.png')}}">
+              <p style="font-size:10px;">TRX</p>
+          </div>
+          <div class="col s4" style="vertical-align:middle;">
+              <p style="float:left;"></p>
+          </div>
+          <div class="col s6">
+              <p style="font-size:14px;">{{data_dict[2]}} TRX</p>
+          </div>
+      </div>
+      <br />
+
+  </div>
+</div>
+
+
+
+<script>
+function myFunction() {
+  l = ["hidder1","hidder2","hidder3"]
+  var x = document.getElementById("row");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+{% endblock %}

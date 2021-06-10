@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/nav.css')}}">
+    {% block head %}{% endblock %}
+</head>
+
+
+<body>
+    <div class="main-bar">
+        <div class="dup-nav">
+            <input type="checkbox" id="check" onclick="myFunction()" autocomplete="off">
+            <label for="check" class="checkbtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <div class="logo-header">
+                <a href="#">ExpoBNB</a>
+            </div>
+            <div class="Content">
+
+            </div>
+            <ul>
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li class="active"><a href="/logout">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        {% block content %}
+        {% endblock %}
+    </div>
+<script>
+
+</script>
+</body>
+</html>
