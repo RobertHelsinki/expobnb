@@ -1,14 +1,14 @@
 beautifulsoup4==4.9.3
 certifi==2021.5.30
 chardet==4.0.0
-click==7.1
+click==8.0.1
 colorama==0.4.4
-Flask==1.1.4
+Flask==2.0.1
 Flask-SQLAlchemy==2.5.1
 greenlet==1.1.0
 html5lib==1.1
 idna==2.10
-itsdangerous==1.1.0
+itsdangerous==2.0.1
 Jinja2==3.0.1
 lxml==4.6.3
 MarkupSafe==2.0.1
