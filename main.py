@@ -113,18 +113,23 @@ def wallet_add():
 def dashboard():
     if 'USER' in session:
         username = session.get('USER')
-        bnb_balance = Wallets.query.filter_by(username=username, token='bnb').first()
-        doge_balance = Wallets.query.filter_by(username=username, token='doge').first()
-        trx_balance = Wallets.query.filter_by(username=username, token='trx').first()
-        bnb_amnt = float(bnb_balance.balance)*coin_price('binance-coin')
-        doge_amnt = float(doge_balance.balance) * coin_price('dogecoin')
-        trx_amnt = float(trx_balance.balance) * coin_price('tron')
+        ch_user = User.query.filter_by(username=username).first()
+        wallet_status = ch_user.wallet_config
+        if wallet_status == "no":
+            return redirect(url_for('nowallet'))
+        else:
+            bnb_balance = Wallets.query.filter_by(username=username, token='bnb').first()
+            doge_balance = Wallets.query.filter_by(username=username, token='doge').first()
+            trx_balance = Wallets.query.filter_by(username=username, token='trx').first()
+            bnb_amnt = float(bnb_balance.balance)*coin_price('binance-coin')
+            doge_amnt = float(doge_balance.balance) * coin_price('dogecoin')
+            trx_amnt = float(trx_balance.balance) * coin_price('tron')
 
-        total_amnt = bnb_amnt + doge_amnt + trx_amnt
-        total_amnt = round(total_amnt,2)
-        token_balance = [bnb_balance.balance,doge_balance.balance,trx_balance.balance]
-        print(token_balance)
-        return render_template('dashboard.html', data_dict=token_balance,usd_balance=total_amnt)
+            total_amnt = bnb_amnt + doge_amnt + trx_amnt
+            total_amnt = round(total_amnt,2)
+            token_balance = [bnb_balance.balance,doge_balance.balance,trx_balance.balance]
+            print(token_balance)
+            return render_template('dashboard.html', data_dict=token_balance,usd_balance=total_amnt)
     else:
         flash("Login to continue")
         return redirect(url_for('join'))
