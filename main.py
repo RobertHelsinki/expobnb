@@ -227,7 +227,7 @@ def register():
         flash("Username Already exists.")
     else:
         if ch_inviter:
-            new_data = User(username, password, inviter, "1")
+            new_data = User(username, password, inviter, "no")
             db.session.add(new_data)
             db.session.commit()
 
